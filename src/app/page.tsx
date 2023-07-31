@@ -1,95 +1,69 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client"
+import { StateContext } from "context/cards"
+import { useContext } from "react";
+import useFetch from "hooks";
+import Loader from "components/Loader";
+import { Card, Pagination } from "components";
+import { Order } from "types";
+import { Endpoints } from "utils";
+
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+	const { setCart, cart, order, setOrder, query, page, setPage } = useContext(StateContext);
+	const url = Endpoints.getCarts({ order, query, page });
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+	const { loading, setUrl } = useFetch({
+		url: cart.length === 0 ? url : null,
+		setState: setCart
+	});
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+	const totalPages: number = 10;
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+	const changeOrderHandler = (e: React.ChangeEvent<HTMLSelectElement>): void => {
+		const newOrder = (e.target as HTMLSelectElement).value as Order;
+		setOrder(newOrder);
+		setUrl(Endpoints.getCarts({ order: newOrder, query, page }))
+	}
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+	const changePageHandler = (page: number): void => {
+		setPage(page);
+		setUrl(Endpoints.getCarts({ order, query, page }))
+	}
+	return (
+		<main className={'container'}>
+			<div className="d-flex justify-content-between">
+				<div>
+					<select className="form-select" aria-label="Выберете фильтр">
+						<option value="1">Один</option>
+						<option value="2">Два</option>
+						<option value="3">Три</option>
+					</select>
+				</div>
+				<div>
+					<select
+						className="form-select" aria-label="Выбор по умолчанию"
+						value={order}
+						onChange={changeOrderHandler}
+					>
+						<option value={Order.default}>По умолчанию</option>
+						<option value={Order.date}>По дате</option>
+						<option value={Order.cheapest}>Дешевле</option>
+						<option value={Order.expensive}>Дороже</option>
+						<option value={Order.popular}>По популярности</option>
+					</select>
+				</div>
+			</div>
+			<div className="row d-flex mt-4">
+				{loading ?
+					<Loader />
+					:
+					cart.map(item => (<Card key={item.id} card={item} />))}
+			</div>
+			<Pagination
+				setPage={changePageHandler}
+				currentPage={page}
+				totalPages={totalPages}
+			/>
+		</main>
+	)
 }

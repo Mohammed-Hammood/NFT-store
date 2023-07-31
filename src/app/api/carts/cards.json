@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "price": 500,
+        "rarity": "уникальная",
+        "title": "Без слов",
+        "image": "/images/NFT/nastya1.png",
+        "category": "celebrity",
+        "seller": {
+            "id": 1,
+            "description": "Анастаси́я Вячесла́вовна  — российская телеведущая, киноактриса и видеоблогер. Наиболее известна как Instagram-блогер, а также как ведущая телепередачи «Орёл и решка» на телеканале «Пятница!».",
+            "name": "Настя Ивлеева Вячеславовна",
+            "verified": true,
+            "image": "/images/sellers/Anastasia-Vyacheslavovna-Ivleeva.jpeg"
+        }
+    },
+    {
+        "id": 2,
+        "price": 500,
+        "rarity": "уникальная",
+        "title": "Без слов",
+        "image": "/images/NFT/nastya2.png",
+        "category": "celebrity",
+        "seller": {
+            "id": 1,
+            "description": "Анастаси́я Вячесла́вовна  — российская телеведущая, киноактриса и видеоблогер. Наиболее известна как Instagram-блогер, а также как ведущая телепередачи «Орёл и решка» на телеканале «Пятница!».",
+            "name": "Настя Ивлеева Вячеславовна",
+            "verified": true,
+            "image": "/images/sellers/Anastasia-Vyacheslavovna-Ivleeva.jpeg"
+        }
+    },
+    {
+        "id": 3,
+        "price": 500,
+        "rarity": "уникальная",
+        "title": "Без слов",
+        "image": "/images/NFT/nastya3.png",
+        "category": "celebrity",
+        "seller": {
+            "id": 1,
+            "description": "Анастаси́я Вячесла́вовна  — российская телеведущая, киноактриса и видеоблогер. Наиболее известна как Instagram-блогер, а также как ведущая телепередачи «Орёл и решка» на телеканале «Пятница!».",
+            "name": "Настя Ивлеева Вячеславовна",
+            "verified": true,
+            "image": "/images/sellers/Anastasia-Vyacheslavovna-Ivleeva.jpeg"
+        }
+    },
+    {
+        "id": 4,
+        "price": 500,
+        "rarity": "уникальная",
+        "title": "Без слов",
+        "image": "/images/NFT/nastya4.png",
+        "category": "celebrity",
+        "seller": {
+            "id": 1,
+            "description": "Анастаси́я Вячесла́вовна  — российская телеведущая, киноактриса и видеоблогер. Наиболее известна как Instagram-блогер, а также как ведущая телепередачи «Орёл и решка» на телеканале «Пятница!».",
+            "name": "Настя Ивлеева Вячеславовна",
+            "verified": true,
+            "image": "/images/sellers/Anastasia-Vyacheslavovna-Ivleeva.jpeg"
+        }
+    }
+]

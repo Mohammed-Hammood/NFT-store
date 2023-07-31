@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "image":"/images/sellers/Anastasia-Vyacheslavovna-Ivleeva.jpeg",
+        "name": "Анастасия Ивлеева"
+    },
+    {
+        "id": 2,
+        "image":"/images/sellers/Anastasia-Sergeyevna-Zadorozhnaya.png",
+        "name": "Анастасия Задорожная"
+    },
+    {
+        "id": 3,
+        "image":"/images/sellers/Anastasiya-Vasilevna-Makeyeva.png",
+        "name": "Анастасия Макеева"
+    }
+]

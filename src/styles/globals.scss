@@ -1,0 +1,96 @@
+@import './variables.scss';
+
+*,
+*::after,
+*::before {
+    background: transparent;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    margin: 0;
+    max-width: 100%;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    text-decoration: none;
+    color: inherit;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: teal darkblue;
+}
+
+html,
+body {
+    min-height: 100vmin;
+}
+
+body {
+    background: linear-gradient(to bottom, white, white, rgba(253, 212, 70, 0.50));
+}
+
+main {
+    min-height: 100vmin;
+    margin-top: 130px;
+}
+
+.icon13 {
+    width: 13px;
+    height: 13px;
+}
+
+.icon14 {
+    width: 14px;
+    height: 14px;
+}
+
+.icon15 {
+    width: 15px;
+    height: 15px;
+}
+
+
+header nav {
+    backdrop-filter: blur(15px);
+
+    .navbar-brand img {
+        height: 103px;
+        width: 222px;
+        object-fit: cover;
+    }
+
+    .dropdown .dropdown-item:hover {
+        background-color: #FEF6D6;
+    }
+
+    form .input-group {
+        border-radius: 57.595px;
+        height: 40px;
+
+        input,
+        input:hover,
+        input:focus,
+        input:active,
+        button {
+            outline: none;
+            border: none;
+            border-radius: 20px;
+            box-shadow: none;
+            background: transparent;
+        }
+    }
+
+    .authButtons a {
+        border-radius: 20px;
+    }
+}
+.pagination  {
+    .page-link, .active-link, .page-item {
+        border-radius: 50%;
+        min-height: 35px;
+        min-width:  35px;
+    }
+    .active-link, .page-link:focus {
+        box-shadow: none;
+        background-color: var(--mainColor);
+    }
+}
