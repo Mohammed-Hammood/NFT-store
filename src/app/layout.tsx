@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
     title: 'NFT от звезд',
-    description: 'Online store website',
+    description: 'NFT от звезд',
 }
 
 export default function RootLayout({ children, }: { children: React.ReactNode }) {
