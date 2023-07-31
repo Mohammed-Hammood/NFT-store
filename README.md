@@ -1,7 +1,7 @@
 ## React app displays users with information
 - `Stack` React, react router, Context, TypeScript, Sass, Bootstrap
 - Create by `createnext-app`
-- App deployed on [https://NFT-store.vercel.app/](https://NFT-store.vercel.app/)
+- App deployed on [https://NFT-ru.vercel.app/](https://NFT-ru.vercel.app/)
 
 # To run the app locally:
 - clone the repository to your local PC
