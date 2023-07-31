@@ -1,3 +1,14 @@
+## React app displays users with information
+- `Stack` React, react router, Context, TypeScript, Sass, Bootstrap
+- Create by `createnext-app`
+- App deployed on [https://NFT-store.vercel.app/](https://NFT-store.vercel.app/)
+
+# To run the app locally:
+- clone the repository to your local PC
+- Install the dependances by `yarn install`
+- Build the app `yarn buid` and start the app `yarn start`
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
