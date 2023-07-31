@@ -9,7 +9,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
      const query  = searchParams.get("query");
      const order = searchParams.get("order");
     
-    const data  = Array.from({ length: 8 }, (v, i) => {return {...cards[i % 4], id: i}})
+    const data  = Array.from({ length: 50 }, (v, i) => {return {...cards[i % 4], id: i}})
     return NextResponse.json({
         ok: true,
         data: data
