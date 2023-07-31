@@ -33,11 +33,19 @@ export default function Home() {
 		<main className={'container'}>
 			<div className="d-flex justify-content-between">
 				<div>
-					<select className="form-select" aria-label="Выберете фильтр">
-						<option value="1">Один</option>
-						<option value="2">Два</option>
-						<option value="3">Три</option>
-					</select>
+					<button
+						data-bs-toggle={'dropdown'}
+						aria-expanded={false}
+						className="form-select"
+						aria-label="Выберете фильтр"
+					>
+						Фильтры
+					</button>
+					<div className="dropdown-menu">
+						<div className="container">
+
+						</div>
+					</div>
 				</div>
 				<div>
 					<select
