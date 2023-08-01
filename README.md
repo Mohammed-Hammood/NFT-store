@@ -1,5 +1,5 @@
 ## React app displays users with information
-- `Stack` React, react router, Context, TypeScript, Sass, Bootstrap
+- `Stack` Next.js (App Router), Context, TypeScript, Sass, Bootstrap
 - Create by `createnext-app`
 - App deployed on [https://NFT-ru.vercel.app/](https://NFT-ru.vercel.app/)
 
