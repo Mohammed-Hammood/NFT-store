@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import 'styles/globals.scss';
-import 'styles/normalize.scss';
+import 'styles/main.scss';
 import { Footer, Header } from 'components';
 import { ContextProvider } from 'context';
 
